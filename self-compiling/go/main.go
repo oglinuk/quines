@@ -24,16 +24,12 @@ func main() {
 	modInit := &exec.Cmd{
 		Path: p,
 		Args: []string{p, "mod", "init", "example.com/self-compiling"},
-		Stdout: os.Stdout,
-		Stderr: os.Stdout,
 	}
 	_ = modInit.Run()
 
 	build := &exec.Cmd{
 		Path: p,
 		Args: []string{p, "build", "-o", "self"},
-		Stdout: os.Stdout,
-		Stderr: os.Stdout,
 	}
 	_ = build.Run()
 
@@ -46,16 +42,12 @@ func main() {
 	modInit := &exec.Cmd{
 		Path: p,
 		Args: []string{p, "mod", "init", "example.com/self-compiling"},
-		Stdout: os.Stdout,
-		Stderr: os.Stdout,
 	}
 	_ = modInit.Run()
 
 	build := &exec.Cmd{
 		Path: p,
 		Args: []string{p, "build", "-o", "self"},
-		Stdout: os.Stdout,
-		Stderr: os.Stdout,
 	}
 	_ = build.Run()
 

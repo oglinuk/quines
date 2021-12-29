@@ -37,7 +37,4 @@ depths of quines and what they are truly capable of.
 * [ ] Implement a [self-compiling quine](self-compiling)
 	* [X] [C](self-compiling/c)
 	* [X] [Go](self-compiling/go)
-	* [ ] Python3
 	* [ ] C++
-	* [ ] BASH
-	* [ ] JavaScript
