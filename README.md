@@ -22,3 +22,11 @@ its source."
 	* [ ] C++
 	* [ ] BASH
 	* [ ] JavaScript
+
+* [ ] Implement a [self-compiling quine](self-compiling)
+	* [X] C
+	* [ ] Go
+	* [ ] Python3
+	* [ ] C++
+	* [ ] BASH
+	* [ ] JavaScript
