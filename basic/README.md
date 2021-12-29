@@ -5,7 +5,7 @@ each of the languages.
 
 * [X] [C](c)
 * [X] [Go](go)
-* [ ] Python 3
+* [X] [Python 3](python)
 * [ ] CPP
 * [ ] BASH
 * [ ] JavaScript

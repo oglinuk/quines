@@ -16,16 +16,16 @@ its source."
 ## TODO
 
 * [ ] Implement a [basic quine](basic)
-	* [X] C
-	* [X] Go
-	* [ ] Python3
+	* [X] [C](basic/c)
+	* [X] [Go](basic/go)
+	* [X] [Python 3](basic/python)
 	* [ ] C++
 	* [ ] BASH
 	* [ ] JavaScript
 
 * [ ] Implement a [self-compiling quine](self-compiling)
-	* [X] C
-	* [ ] Go
+	* [X] [C](self-compiling/c)
+	* [X] [Go](self-compiling/go)
 	* [ ] Python3
 	* [ ] C++
 	* [ ] BASH
