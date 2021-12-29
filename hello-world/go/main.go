@@ -5,6 +5,10 @@ import (
 	"os"
 )
 
+func f() {
+	fmt.Fprintf(os.Stderr, "hello, world!\n")
+}
+
 func main() {
 	s := `package main
 
@@ -13,13 +17,17 @@ import (
 	"os"
 )
 
+func f() {
+	fmt.Fprintf(os.Stderr, "hello, world!\n")
+}
+
 func main() {
 	s := %c%s%c
 
-	fmt.Fprintf(os.Stderr, "hello, world!\n")
+	f()
 	fmt.Printf(s, rune(96), s, rune(96))
 }`
 
-	fmt.Fprintf(os.Stderr, "hello, world!\n")
+	f()
 	fmt.Printf(s, rune(96), s, rune(96))
 }
