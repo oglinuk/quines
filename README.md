@@ -38,3 +38,10 @@ depths of quines and what they are truly capable of.
 	* [X] [C](self-compiling/c)
 	* [X] [Go](self-compiling/go)
 	* [ ] C++
+
+* [ ] Implement a [hello world quine](hello-world)
+	* [X] [C](hello-world/c)
+	* [X] [Go](hello-world/go)
+	* [ ] C++
+	* [ ] BASH
+	* [ ] JavaScript
