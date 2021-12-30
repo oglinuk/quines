@@ -50,3 +50,8 @@ depths of quines and what they are truly capable of.
 	* [ ] C
 	* [X] [Go](self-modifying/go)
 	* [ ] C++
+
+* [ ] Implement a [frankenquine](frankenquine)
+	* [ ] C
+	* [X] [Go](frankenquine/go)
+	* [ ] C++
