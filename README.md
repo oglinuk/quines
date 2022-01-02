@@ -15,14 +15,12 @@ its source."
 
 ## Why?
 
-All it does it output it's source? What could be any use of that? I think
-it is important to remember that based on Ken's description, a quine can
-be any program that takes no input and produces it's source as output.
-This description does not limit the quine to what it can do in the time
-between starting and outputting its own source. An example of what I mean
-is the [self-compiling quines](self-compiling), which compile themselves
-before outputting their source code. It is my intention to explore the
-depths of quines and what they are truly capable of.
+All it does it output it's source? What could be any use of that? The
+description given by Ken does not limit the quine to what it can do in
+the time between starting and outputting its own source. An example of
+what I mean is the [self-compiling quines](self-compiling), which compile
+themselves before outputting their source code. It is my intention to
+explore the depths of quines and what they are truly capable of.
 
 ## TODO
 
