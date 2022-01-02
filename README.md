@@ -58,10 +58,4 @@ explore the depths of quines and what they are truly capable of.
 
 * [ ] Implement a [frankenquine](frankenquine)
 	* [traditional](frankenquine/traditional)
-		* [ ] C
-		* [X] [Go](frankenquine/traditional/go)
-		* [ ] C++
 	* [pseudo](frankenquine/pseudo)
-		* [ ] C
-		* [X] [Go](frankenquine/pseudo/go)
-		* [ ] C++

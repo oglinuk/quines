@@ -150,14 +150,14 @@ func main() {
 	os.Remove("go.mod")
 	modInit := &exec.Cmd{
 		Path: p,
-		Args: []string{p, "mod", "init", "example.com/self-modifying"},
+		Args: []string{p, "mod", "init", "example.com/traditional-frankenquine"},
 	}
 	_ = modInit.Run()
 
-	// self-modify
+	// self-create
 	f()
 
-	// self-compile
+	// compile monster
 	compile := &exec.Cmd{
 		Path: p,
 		Args: []string{p, "build", "main.go"},
@@ -174,17 +174,17 @@ func main() {
 	os.Remove("go.mod")
 	modInit := &exec.Cmd{
 		Path: p,
-		Args: []string{p, "mod", "init", "example.com/self-modifying"},
+		Args: []string{p, "mod", "init", "example.com/traditional-frankenquine"},
 	}
 	_ = modInit.Run()
 
-	// self-modify
+	// self-create
 	f()
 
-	// self-compile
+	// compile monster
 	compile := &exec.Cmd{
 		Path: p,
-		Args: []string{p, "build", "main.go"},
+		Args: []string{p, "build", "monster.go"},
 	}
 	_ = compile.Run()
 
