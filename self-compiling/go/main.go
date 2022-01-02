@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"time"
 )
 
 func main() {
@@ -13,43 +14,48 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"time"
 )
 
 func main() {
 	s := %c%s%c
 
-	os.Remove("go.mod")
-
 	p, _ := exec.LookPath("go")
+
+	// generate Go module
+	os.Remove("go.mod")
 	modInit := &exec.Cmd{
 		Path: p,
-		Args: []string{p, "mod", "init", "example.com/self-compiling"},
+		Args: []string{p, "mod", "init", fmt.Sprintf("example.com/self%%d", time.Now().Unix())},
 	}
 	_ = modInit.Run()
 
-	build := &exec.Cmd{
+	// self-compile
+	compile := &exec.Cmd{
 		Path: p,
-		Args: []string{p, "build", "-o", "self"},
+		Args: []string{p, "build", "main.go"},
 	}
-	_ = build.Run()
+	_ = compile.Run()
 
 	fmt.Printf(s, rune(96), s, rune(96))
-}
-`
-	os.Remove("go.mod")
+}`
 
 	p, _ := exec.LookPath("go")
+
+	// generate Go module
+	os.Remove("go.mod")
 	modInit := &exec.Cmd{
 		Path: p,
-		Args: []string{p, "mod", "init", "example.com/self-compiling"},
+		Args: []string{p, "mod", "init", fmt.Sprintf("example.com/self%d", time.Now().Unix())},
 	}
 	_ = modInit.Run()
 
-	build := &exec.Cmd{
+	// self-compile
+	compile := &exec.Cmd{
 		Path: p,
-		Args: []string{p, "build", "-o", "self"},
+		Args: []string{p, "build"},
 	}
-	_ = build.Run()
+	_ = compile.Run()
 
 	fmt.Printf(s, rune(96), s, rune(96))
 }
