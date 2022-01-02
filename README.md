@@ -22,6 +22,13 @@ what I mean is the [self-compiling quines](self-compiling), which compile
 themselves before outputting their source code. It is my intention to
 explore the depths of quines and what they are truly capable of.
 
+## Notable Existing Quines
+
+* [quinesnake](https://github.com/taylorconor/quinesnake) - a holy grail of quines, this is the game of snake played over its own source code
+* [quinedb](https://github.com/gfredericks/quinedb) - a quine-based database in BASH
+* [LDCA](https://github.com/mertyildiran/ldca) - self-replicating, self-modifying Assemply program
+* [QuineWars](https://github.com/miguel-sc/QuineWars) - an HTML file, that prints itself out in the Star Wars opening style
+
 ## TODO
 
 * [ ] Implement a [basic quine](basic)
@@ -50,6 +57,11 @@ explore the depths of quines and what they are truly capable of.
 	* [ ] C++
 
 * [ ] Implement a [frankenquine](frankenquine)
-	* [ ] C
-	* [X] [Go](frankenquine/go)
-	* [ ] C++
+	* [traditional](frankenquine/traditional)
+		* [ ] C
+		* [X] [Go](frankenquine/traditional/go)
+		* [ ] C++
+	* [pseudo](frankenquine/pseudo)
+		* [ ] C
+		* [X] [Go](frankenquine/pseudo/go)
+		* [ ] C++
