@@ -8,12 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"time"
 )
-
-func init() {
-	time.Sleep(time.Second*5)
-}
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
@@ -70,12 +65,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"time"
 )
-
-func init() {
-	time.Sleep(time.Second*5)
-}
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
@@ -93,7 +83,6 @@ import (
 	"os/exec"
 )
 
-
 func f() {
 	// Read our own source code
 	me, _ := os.Open("main.go")
@@ -109,12 +98,12 @@ func f() {
 	for bs.Scan() {
 		t := bs.Text()
 		if t == "/**" {
-			for {
+			for bs.Scan() {
 				t = bs.Text()
 				if t == "**/" {
 					break
 				}
-				if _, e := c[t]; !e {
+				if  _, e := c[t]; !e {
 					c[t] = struct{}{}
 					m.WriteString(t+string(rune(10)))
 				}
@@ -123,28 +112,26 @@ func f() {
 	}
 }
 
-
 func main() {
 	s := %c%s%c
 
-	gop, _ := exec.LookPath("go")
+	p, _ := exec.LookPath("go")
 
 	// generate Go module
 	os.Remove("go.mod")
 	modInit := &exec.Cmd{
-		Path: gop,
-		Args: []string{gop, "mod", "init", "example.com/pseudo-frankenquine"},
+		Path: p,
+		Args: []string{p, "mod", "init", "example.com/pseudo-frankenquine"},
 	}
 	_ = modInit.Run()
 
 	// self-create
 	f()
 
-	// compile
-	ccp, _ := exec.LookPath("cc")
+	// compile monster
 	compile := &exec.Cmd{
-		Path: ccp,
-		Args: []string{ccp, "monster.c", "-o", "cmain"},
+		Path: p,
+		Args: []string{p, "build", "monster.go"},
 	}
 	_ = compile.Run()
 
@@ -164,10 +151,10 @@ func main() {
 	// self-create
 	f()
 
-	// compile
+	// compile monster
 	compile := &exec.Cmd{
 		Path: p,
-		Args: []string{p, "monster.go", "-o", "monster"},
+		Args: []string{p, "build", "monster.go"},
 	}
 	_ = compile.Run()
 
